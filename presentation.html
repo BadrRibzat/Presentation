@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Learning App Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+        #presentation {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            box-sizing: border-box;
+            position: absolute;
+            transition: transform 0.5s ease-in-out;
+            background-color: #ffffff;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        .slide-content {
+            max-width: 900px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        h2 {
+            font-size: 2em;
+            color: #34495e;
+            margin-bottom: 20px;
+        }
+        ul {
+            text-align: left;
+            font-size: 1.3em;
+            color: #444;
+            padding-left: 30px;
+        }
+        li {
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        p {
+            font-size: 1.4em;
+            color: #666;
+            line-height: 1.6;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+        #timer {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 1.8em;
+            background-color: rgba(44, 62, 80, 0.8);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        #controls {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        button {
+            font-size: 1.3em;
+            margin: 0 15px;
+            padding: 12px 25px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="presentation">
+        <div class="slide" id="slide1">
+            <div class="slide-content">
+                <h1>English Learning App</h1>
+                <h2>A Full Stack Web Application for Non-English Speakers</h2>
+                <p>Graduation Project Presentation</p>
+            </div>
+        </div>
+
+        <div class="slide" id="slide2">
+            <div class="slide-content">
+                <h1>Project Overview</h1>
+                <ul>
+                    <li>Target Audience: <span class="highlight">Non-English speakers</span></li>
+                    <li>Key Features: Interactive flashcards, exercises, and automatic feedback</li>
+                    <li>Learning Approach: Word recognition, context usage, and practical application</li>
+                    <li>User Interaction: Fill-in-the-blank exercises, immediate feedback</li>
+                    <li>Multilingual Support: Interface available in multiple languages</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide" id="slide3">
+            <div class="slide-content">
+                <h1>Technology Stack</h1>
+                <ul>
+                    <li>Frontend: <span class="highlight">Vue.js</span>, Vuex (State Management), Vue Router</li>
+                    <li>Backend: <span class="highlight">Node.js</span>, Express.js</li>
+                    <li>Database: <span class="highlight">MongoDB</span> (User data storage)</li>
+                    <li>Authentication: JSON Web Tokens (JWT)</li>
+                    <li>Internationalization: vue-i18n</li>
+                    <li>Build Tool: Vite</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide" id="slide4">
+            <div class="slide-content">
+                <h1>Project Architecture</h1>
+                <svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="50" y="150" width="200" height="100" fill="#3498db" />
+                    <text x="150" y="205" text-anchor="middle" fill="white" font-size="18">Frontend (Vue.js)</text>
+                    
+                    <rect x="300" y="150" width="200" height="100" fill="#2ecc71" />
+                    <text x="400" y="205" text-anchor="middle" fill="white" font-size="18">Backend (Node.js/Express)</text>
+                    
+                    <rect x="550" y="150" width="200" height="100" fill="#e74c3c" />
+                    <text x="650" y="205" text-anchor="middle" fill="white" font-size="18">Database (MongoDB)</text>
+                    
+                    <line x1="250" y1="200" x2="300" y2="200" stroke="black" stroke-width="3" />
+                    <line x1="500" y1="200" x2="550" y2="200" stroke="black" stroke-width="3" />
+                    
+                    <polygon points="295,195 305,200 295,205" fill="black" />
+                    <polygon points="255,195 245,200 255,205" fill="black" />
+                    <polygon points="545,195 555,200 545,205" fill="black" />
+                    <polygon points="505,195 495,200 505,205" fill="black" />
+                </svg>
+                <p>Frontend (Vue.js) ↔ Backend (Node.js/Express) ↔ Database (MongoDB)</p>
+            </div>
+        </div>
+
+        <div class="slide" id="slide5">
+            <div class="slide-content">
+                <h1>API Endpoints</h1>
+                <ul>
+                    <li><span class="highlight">POST</span> /api/auth/register - User registration</li>
+                    <li><span class="highlight">POST</span> /api/auth/login - User login</li>
+                    <li><span class="highlight">GET</span> /api/lessons - Retrieve all lessons</li>
+                    <li><span class="highlight">GET</span> /api/lessons/:id - Get specific lesson</li>
+                    <li><span class="highlight">POST</span> /api/lessons/:id/submit - Submit lesson answers</li>
+                    <li><span class="highlight">GET</span> /api/user/profile - Get user profile</li>
+                    <li><span class="highlight">PUT</span> /api/user/profile - Update user profile</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide" id="slide6">
+            <div class="slide-content">
+                <h1>Data Flow</h1>
+                <svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="50" y="50" width="150" height="80" fill="#3498db" />
+                    <text x="125" y="95" text-anchor="middle" fill="white" font-size="16">User Interaction</text>
+
+                    <rect x="250" y="50" width="150" height="80" fill="#2ecc71" />
+                    <text x="325" y="95" text-anchor="middle" fill="white" font-size="16">Frontend</text>
+
+                    <rect x="450" y="50" width="150" height="80" fill="#e74c3c" />
+                    <text x="525" y="95" text-anchor="middle" fill="white" font-size="16">API Calls</text>
+
+                    <rect x="650" y="50" width="150" height="80" fill="#f39c12" />
+                    <text x="725" y="95" text-anchor="middle" fill="white" font-size="16">Backend</text>
+
+                    <rect x="650" y="250" width="150" height="80" fill="#9b59b6" />
+                    <text x="725" y="295" text-anchor="middle" fill="white" font-size="16">Database</text>
+
+                    <rect x="450" y="250" width="150" height="80" fill="#1abc9c" />
+                    <text x="525" y="295" text-anchor="middle" fill="white" font-size="16">Response</text>
+
+                    <rect x="250" y="250" width="150" height="80" fill="#34495e" />
+                    <text x="325" y="295" text-anchor="middle" fill="white" font-size="16">User Feedback</text>
+
+                    <line x1="200" y1="90" x2="250" y2="90" stroke="black" stroke-width="2" />
+                    <line x1="400" y1="90" x2="450" y2="90" stroke="black" stroke-width="2" />
+                    <line x1="600" y1="90" x2="650" y2="90" stroke="black" stroke-width="2" />
+                    <line x1="725" y1="130" x2="725" y2="250" stroke="black" stroke-width="2" />
+                    <line x1="650" y1="290" x2="600" y2="290" stroke="black" stroke-width="2" />
+                    <line x1="450" y1="290" x2="400" y2="290" stroke="black" stroke-width="2" />
+                    <line x1="250" y1="290" x2="200" y2="290" stroke="black" stroke-width="2" />
+                    <line x1="125" y1="130" x2="125" y2="250" stroke="black" stroke-width="2" />
+
+                    <polygon points="245,85 255,90 245,95" fill="black" />
+                    <polygon points="445,85 455,90 445,95" fill="black" />
+                    <polygon points="645,85 655,90 645,95" fill="black" />
+                    <polygon points="720,245 725,255 730,245" fill="black" />
+                    <polygon points="605,285 595,290 605,295" fill="black" />
+                    <polygon points="405,285 395,290 405,295" fill="black" />
+                    <polygon points="205,285 195,290 205,295" fill="black" />
+                    <polygon points="120,245 125,255 130,245" fill="black" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="slide" id="slide7">
+            <div class="slide-content">
+                <h1>User Experience</h1>
+                <ul>
+                    <li>Intuitive interface for easy navigation</li>
+                    <li>Progressive learning path</li>
+                    <li>Real-time feedback on exercises</li>
+                    <li>Personalized learning recommendations</li>
+                    <li>Multi-device support for learning on-the-go</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide" id="slide8">
+            <div class="slide-content">
+                <h1>Security Measures</h1>
+                <ul>
+                    <li>Secure user authentication with JWT</li>
+                    <li>Data encryption for sensitive information</li>
+                    <li>Regular security audits and updates</li>
+                    <li>HTTPS protocol for all communications</li>
+                    <li>Rate limiting to prevent abuse</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide" id="slide9">
+            <div class="slide-content">
+                <h1>Conclusion and Future Enhancements</h1>
+                <ul>
+                    <li>Successful implementation of core features</li>
+                    <li>Effective use of full-stack technologies</li>
+                    <li>Future enhancements:</li>
+                    <ul>
+                        <li>Advanced analytics for personalized learning</li>
+                        <li>Integration with external language APIs</li>
+                        <li>Mobile app development</li>
+                        <li>Gamification elements</li>
+                        <li>AI-powered conversation practice</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="timer">60</div>
+    <div id="controls">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const timer = document.getElementById('timer');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let countdown;
+
+        function showSlide(n) {
+            slides.forEach((slide, index) => {
+                slide.style.transform = `translateX(${(index - n) * 100}%)`;
+            });
+            currentSlide = n;
+            resetTimer();
+        }
+
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                showSlide(currentSlide + 1);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        }
+
+        function resetTimer() {
+            clearInterval(countdown);
+            let seconds = 60;
+            timer.textContent = seconds;
+            countdown = setInterval(() => {
+                seconds--;
+                timer.textContent = seconds;
+                if (seconds <= 0) {
+                    clearInterval(countdown);
+                }
+            }, 1000);
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        showSlide(0);
+    </script>
+</body>
+</html>
