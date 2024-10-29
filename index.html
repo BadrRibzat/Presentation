@@ -1,169 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Learning App Presentation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn English Platform Presentation</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="presentation">
-        <!-- Existing Slides -->
-        <div class="slide" id="slide1">
-            <div class="slide-content">
-                <h1>English Learning App</h1>
-                <h2>A Full Stack Web Application for Non-English Speakers</h2>
-                <p>Graduation Project Presentation</p>
-            </div>
-        </div>
-
-        <div class="slide" id="slide2">
-            <div class="slide-content">
-                <h1>Project Overview</h1>
-                <ul>
-                    <li>Target Audience: <span class="highlight">Non-English speakers</span></li>
-                    <li>Key Features: Interactive flashcards, exercises, and automatic feedback</li>
-                    <li>Learning Approach: Word recognition, context usage, and practical application</li>
-                    <li>User Interaction: Fill-in-the-blank exercises, immediate feedback</li>
-                    <li>Multilingual Support: Interface available in multiple languages</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="slide" id="slide3">
-            <div class="slide-content">
-                <h1>Technology Stack</h1>
-                <ul>
-                    <li>Frontend: <span class="highlight">Vue.js</span>, Vuex (State Management), Vue Router</li>
-                    <li>Backend: <span class="highlight">Node.js</span>, Express.js</li>
-                    <li>Database: <span class="highlight">MongoDB</span> (User data storage)</li>
-                    <li>Authentication: JSON Web Tokens (JWT)</li>
-                    <li>Internationalization: vue-i18n</li>
-                    <li>Build Tool: Vite</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="slide" id="slide4">
-            <div class="slide-content">
-                <h1>Project Architecture</h1>
-                <svg width="700" height="200" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="50" y="50" width="150" height="80" fill="#3498db" />
-                    <text x="125" y="95" text-anchor="middle" fill="white" font-size="14">Frontend (Vue.js)</text>
-                    
-                    <rect x="250" y="50" width="150" height="80" fill="#2ecc71" />
-                    <text x="325" y="95" text-anchor="middle" fill="white" font-size="14">Backend (Node.js/Express)</text>
-                    
-                    <rect x="450" y="50" width="150" height="80" fill="#e74c3c" />
-                    <text x="525" y="95" text-anchor="middle" fill="white" font-size="14">Database (MongoDB)</text>
-                    
-                    <line x1="200" y1="90" x2="250" y2="90" stroke="black" stroke-width="2" />
-                    <line x1="400" y1="90" x2="450" y2="90" stroke="black" stroke-width="2" />
-                    
-                    <polygon points="245,85 255,90 245,95" fill="black" />
-                    <polygon points="445,85 455,90 445,95" fill="black" />
-                </svg>
-                <p>Frontend (Vue.js) ↔ Backend (Node.js/Express) ↔ Database (MongoDB)</p>
-            </div>
-        </div>
-
-        <div class="slide" id="slide5">
-            <div class="slide-content">
-                <h1>API Endpoints</h1>
-                <ul>
-                    <li><span class="highlight">POST</span> /api/auth/register - User registration</li>
-                    <li><span class="highlight">POST</span> /api/auth/login - User login</li>
-                    <li><span class="highlight">GET</span> /api/lessons - Retrieve all lessons</li>
-                    <li><span class="highlight">GET</span> /api/lessons/:id - Get specific lesson</li>
-                    <li><span class="highlight">POST</span> /api/lessons/:id/submit - Submit lesson answers</li>
-                    <li><span class="highlight">GET</span> /api/user/profile - Get user profile</li>
-                    <li><span class="highlight">PUT</span> /api/user/profile - Update user profile</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="slide" id="slide6">
-            <div class="slide-content">
-                <h1>Data Flow</h1>
-                <svg width="700" height="300" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="50" y="50" width="130" height="60" fill="#3498db" />
-                    <text x="115" y="85" text-anchor="middle" fill="white" font-size="14">User Interaction</text>
-
-                    <rect x="210" y="50" width="130" height="60" fill="#2ecc71" />
-                    <text x="275" y="85" text-anchor="middle" fill="white" font-size="14">Frontend</text>
-
-                    <rect x="370" y="50" width="130" height="60" fill="#e74c3c" />
-                    <text x="435" y="85" text-anchor="middle" fill="white" font-size="14">API Calls</text>
-
-                    <rect x="530" y="50" width="130" height="60" fill="#f39c12" />
-                    <text x="595" y="85" text-anchor="middle" fill="white" font-size="14">Backend</text>
-
-                    <rect x="530" y="200" width="130" height="60" fill="#9b59b6" />
-                    <text x="595" y="235" text-anchor="middle" fill="white" font-size="14">Database</text>
-
-                    <rect x="370" y="200" width="130" height="60" fill="#1abc9c" />
-                    <text x="435" y="235" text-anchor="middle" fill="white" font-size="14">Response</text>
-
-                    <line x1="180" y1="80" x2="210" y2="80" stroke="black" stroke-width="2" />
-                    <line x1="340" y1="80" x2="370" y2="80" stroke="black" stroke-width="2" />
-                    <line x1="500" y1="80" x2="530" y2="80" stroke="black" stroke-width="2" />
-                    <line x1="595" y1="110" x2="595" y2="200" stroke="black" stroke-width="2" />
-                    <line x1="530" y1="230" x2="500" y2="230" stroke="black" stroke-width="2" />
-                    <line x1="370" y1="230" x2="340" y2="230" stroke="black" stroke-width="2" />
-
-                    <polygon points="205,75 215,80 205,85" fill="black" />
-                    <polygon points="335,75 345,80 335,85" fill="black" />
-                    <polygon points="495,75 505,80 495,85" fill="black" />
-                    <polygon points="590,195 595,205 600,195" fill="black" />
-                    <polygon points="505,225 495,230 505,235" fill="black" />
-                    <polygon points="345,225 335,230 345,235" fill="black" />
-                </svg>
-            </div>
-        </div>
-
-        <div class="slide" id="slide7">
-            <div class="slide-content">
-                <h1>User Experience</h1>
-                <ul>
-                    <li>Intuitive interface for easy navigation</li>
-                    <li>Progressive learning path</li>
-                    <li>Real-time feedback on exercises</li>
-                    <li>Personalized learning recommendations</li>
-                    <li>Multi-device support for learning on-the-go</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="slide" id="slide8">
-            <div class="slide-content">
-                <h1>Security Measures</h1>
-                <ul>
-                    <li>Secure user authentication with JWT</li>
-                    <li>Data encryption for sensitive information</li>
-                    <li>Regular security audits and updates</li>
-                    <li>HTTPS protocol for all communications</li>
-                    <li>Rate limiting to prevent abuse</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- New Conclusion Slide -->
-        <div class="slide" id="slide9">
-            <div class="slide-content">
-                <h1>Conclusion</h1>
-                <p>We hope to expand this project to include more than <span class="highlight">100 lessons</span> and fully develop it into a <span class="highlight">real application</span> for non-English speakers around the world.</p>
-                <p>With continued updates and improvements, our goal is to provide a valuable resource for users globally, making English learning more accessible and effective.</p>
-            </div>
-        </div>
+  <div class="slide-container">
+    <div class="slide" id="slide1">
+      <h1>Learn English Platform</h1>
+      <h2>Project Presentation</h2>
+      <p>Your Name: [Badr Ribzat]</p>
+      <p>Date: [11/14/2024]</p>
     </div>
-
-    <div id="timer">45</div>
-    <div id="controls">
-        <button id="prevBtn">Previous</button>
-        <button id="nextBtn">Next</button>
+    <div class="slide" id="slide2">
+      <h2>Project Overview</h2>
+      <p><strong>Brief Description:</strong> An English learning platform with user management, lesson tracking, and a chatbot.</p>
+      <p><strong>Purpose:</strong> To provide an interactive and engaging way for users to learn English.</p>
     </div>
-
-    <script src="script.js"></script>
+    <div class="slide" id="slide3">
+      <h2>Architecture and Technologies</h2>
+      <p><strong>Backend:</strong> Django, Django REST Framework</p>
+      <p><strong>Database:</strong> PostgreSQL</p>
+      <p><strong>Authentication:</strong> JWT (JSON Web Tokens)</p>
+      <p><strong>Third-Party Services:</strong> Google OAuth2 for authentication, SMTP for email</p>
+    </div>
+    <div class="slide" id="slide4">
+      <h2>Accounts App</h2>
+      <p><strong>User Registration:</strong> /register/</p>
+      <pre><code>{
+  "username": "Kilwa",
+  "email": "kilwa@example.com",
+  "password": "kilwapassword"
+}</code></pre>
+      <p><strong>User Login:</strong> /login/</p>
+      <pre><code>{
+  "email": "kilwa@example.com",
+  "password": "kilwapassword"
+}</code></pre>
+      <p><strong>Profile Management:</strong> /profile/</p>
+      <pre><code>{
+  "username": "Kilwa",
+  "email": "kilwa@example.com",
+  "language": "en"
+}</code></pre>
+      <p><strong>Password Reset:</strong> /password-reset/</p>
+      <pre><code>{
+  "email": "kilwa@example.com"
+}</code></pre>
+    </div>
+    <div class="slide" id="slide5">
+      <h2>Lessons App</h2>
+      <p><strong>Lesson Management:</strong> /lessons/</p>
+      <pre><code>{
+  "title": "Introduction to English",
+  "level": 1,
+  "content": "Basic English grammar and vocabulary."
+}</code></pre>
+      <p><strong>User Progress Tracking:</strong> /user-progress/</p>
+      <pre><code>{
+  "user": 1,
+  "lesson": 1,
+  "completed": true
+}</code></pre>
+      <p><strong>Quizzes and Flashcards:</strong> /quizzes/, /flashcards/</p>
+      <pre><code>{
+  "lesson": 1,
+  "title": "Basic Quiz",
+  "questions": [
+    {
+      "question_text": "What is the plural of 'child'?",
+      "correct_answer": "children",
+      "options": ["childs", "childes", "children"]
+    }
+  ]
+}</code></pre>
+    </div>
+    <div class="slide" id="slide6">
+      <h2>Chatbot App</h2>
+      <p><strong>Basic Chatbot Functionality:</strong> /chatbot/</p>
+      <pre><code>{
+  "input": "Hello"
+}</code></pre>
+      <p>Example Response:</p>
+      <pre><code>{
+  "response_text": "Hi there! How can I help you?"
+}</code></pre>
+    </div>
+    <div class="slide" id="slide7">
+      <h2>Development Report</h2>
+      <p><strong>Successes:</strong> User authentication, lesson management, and chatbot.</p>
+      <p><strong>Challenges:</strong> User progress tracking, third-party services integration.</p>
+      <p><strong>Areas for Improvement:</strong> Better error handling, more testing.</p>
+      <p><strong>Lessons Learned:</strong> Modular design, Django and DRF usage.</p>
+      <p><strong>Next Steps:</strong> Advanced features, UI/UX improvements.</p>
+    </div>
+    <div class="slide" id="slide8">
+      <h2>Conclusion</h2>
+      <p><strong>Summary:</strong> Key points recap.</p>
+      <p><strong>Reflection:</strong> Experience and lessons learned.</p>
+      <p><strong>Thank You</strong> for your time and attention.</p>
+    </div>
+    <div class="slide" id="slide9">
+      <h2>Q&amp;A</h2>
+      <p>Questions: Open floor for audience questions.</p>
+    </div>
+    <div class="slide" id="slide10">
+      <h2>Contact Information</h2>
+      <p>Your Name: [Badr Ribzat]</p>
+      <p>Email: [badrribzat@gmail.com]</p>
+      <p>GitHub Repository: <a href="https://github.com/BadrRibzat/Learn_English.git" target="_blank">Learn_English</a></p>
+    </div>
+  </div>
+  <div class="controls">
+    <button onclick="previousSlide()">Previous</button>
+    <button onclick="nextSlide()">Next</button>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
